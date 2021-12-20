@@ -1,0 +1,37 @@
+<h2>User List</h2>
+
+<input type="text" name="searchtext"placeholder="&#61442; search by name or adress or pincode" class="form-control"  [(ngModel)] = "userObj.firstName" >
+<table class="table table.striped">
+
+    <thead> 
+
+        <th>First Name</th>
+        <th>last Name</th>
+        <th > Date Of Birth</th>
+        <th>Date Of Joining</th>
+        <th>Email</th>
+        
+        <th>Actions</th>
+ </thead>
+ <tbody>
+     <tr *ngFor="let user of users | filter:userObj.firstName index as i ">
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.dateofBirth}}</td>
+        <td>{{user.dateOfJoining}}</td>
+        <td>{{user.email}}</td>
+        
+        <td>
+            <button (click)="updateUser(user.userId)" class="btn btn-info">Update</button>
+        <button (click)="deleteUser(user.userId)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+            <button (click) = "userDetails(user.userId)" class = "btn btn-info" style="margin-left: 10px"> 
+                View</button>
+        </td>
+        </tr>
+
+
+ </tbody>
+
+
+
+</table>

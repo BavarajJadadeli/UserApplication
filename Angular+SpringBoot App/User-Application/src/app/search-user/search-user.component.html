@@ -1,0 +1,33 @@
+<h3> User Details</h3>
+<div>
+    <div>
+        <label> <b> First Name: </b></label> {{userObj.firstName}}
+    </div>
+    <div>
+        <label> <b> Last Name: </b></label> {{userObj.lastName}}
+    </div>
+    <div>
+        <label> <b>Date of Birth: </b></label> {{userObj.dateofBirth}}
+    </div>
+    <div>
+        <label> <b> Date of Joining: </b></label> {{userObj.dateOfJoining}}
+    </div>
+   
+    <div>
+        <label> <b> Email Id: </b></label> {{userObj.email}}
+    </div> 
+    <div>
+        <label> <b> Address: </b></label> {{userObj.adress}}
+    </div>
+    <div>
+        <label> <b> Pincode: </b></label> {{userObj.pincode}}
+    </div>
+
+</div>
+
+
+<div>
+    
+    <a routerLink="/users"><button (click)="userDetailsList" class="btn btn-info" >Back</button></a>
+   
+</div>
